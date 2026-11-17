@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="title.request">طلب خدمة | نخبة التقنية</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+  <header id="site-header" class="bg-white shadow sticky top-0 z-50"></header>
+
+  <main>
+    <!-- عنوان الصفحة -->
+    <section class="bg-gradient-to-br from-blue-600 to-blue-900 text-white">
+      <div class="max-w-6xl mx-auto px-4 py-14 text-center">
+        <h1 class="text-3xl md:text-5xl font-bold" data-i18n="req.title"></h1>
+        <p class="mt-4 text-blue-100" data-i18n="req.sub"></p>
+      </div>
+    </section>
+
+    <section class="max-w-2xl mx-auto px-4 py-12">
+
+      <!-- النموذج -->
+      <form id="request-form" novalidate class="bg-white rounded-xl shadow p-6 md:p-8 space-y-5">
+
+        <!-- الاسم -->
+        <div>
+          <label for="name" class="block font-bold mb-1">
+            <span data-i18n="form.name"></span>
+          </label>
+          <input type="text" id="name" name="name" data-i18n-placeholder="form.name.ph"
+            class="w-full border border-slate-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <p id="error-name" class="hidden text-red-600 text-sm mt-1"></p>
+        </div>
+
+        <!-- البريد -->
+        <div>
+          <label for="email" class="block font-bold mb-1">
+            <span data-i18n="form.email"></span>
+          </label>
+          <input type="email" id="email" name="email" placeholder="name@example.com" dir="ltr"
+            class="w-full border border-slate-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <p id="error-email" class="hidden text-red-600 text-sm mt-1"></p>
+        </div>
+
+        <!-- الجوال -->
+        <div>
+          <label for="phone" class="block font-bold mb-1">
+            <span data-i18n="form.phone"></span>
+          </label>
+          <input type="tel" id="phone" name="phone" placeholder="05XXXXXXXX" dir="ltr"
+            class="w-full border border-slate-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <p id="error-phone" class="hidden text-red-600 text-sm mt-1"></p>
+        </div>
+
+        <!-- الخدمة -->
+        <div>
+          <label for="service" class="block font-bold mb-1">
+            <span data-i18n="form.service"></span>
+          </label>
+          <select id="service" name="service"
+            class="w-full border border-slate-300 rounded-lg px-4 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="" data-i18n="form.service.choose"></option>
+            <option value="web" data-i18n="svc.web"></option>
+            <option value="mobile" data-i18n="svc.mobile"></option>
+            <option value="support" data-i18n="svc.support"></option>
+            <option value="security" data-i18n="svc.security"></option>
+            <option value="cloud" data-i18n="svc.cloud"></option>
+            <option value="branding" data-i18n="svc.branding"></option>
+          </select>
+          <p id="error-service" class="hidden text-red-600 text-sm mt-1"></p>
+        </div>
+
+        <!-- الميزانية -->
+        <div>
+          <label for="budget" class="block font-bold mb-1">
+            <span data-i18n="form.budget"></span>
+            <span class="text-slate-400 font-normal" data-i18n="form.optional"></span>
+          </label>
+          <select id="budget" name="budget"
+            class="w-full border border-slate-300 rounded-lg px-4 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="" data-i18n="form.budget.none"></option>
+            <option value="low" data-i18n="budget.low"></option>
+            <option value="mid" data-i18n="budget.mid"></option>
+            <option value="high" data-i18n="budget.high"></option>
+          </select>
+        </div>
+
+        <!-- التفاصيل -->
+        <div>
+          <label for="details" class="block font-bold mb-1">
+            <span data-i18n="form.details"></span>
+          </label>
+          <textarea id="details" name="details" rows="5" data-i18n-placeholder="form.details.ph"
+            class="w-full border border-slate-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+          <p id="error-details" class="hidden text-red-600 text-sm mt-1"></p>
+        </div>
+        <p id="send-error" data-i18n="err.send"
+          class="hidden text-red-600 text-center text-sm"></p>
+        <!-- زر الإرسال -->
+        <button type="submit" id="submit-btn" data-i18n="form.submit"
+          class="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition">
+        </button>
+      </form>
+
+      <!-- رسالة النجاح -->
+      <div id="success-box" class="hidden bg-white rounded-xl shadow p-10 text-center">
+        <div class="text-6xl">✅</div>
+        <h2 class="mt-4 text-2xl font-bold" data-i18n="success.title"></h2>
+        <p class="mt-2 text-slate-500" data-i18n="success.text"></p>
+        <a href="index.html" data-i18n="success.home"
+          class="inline-block mt-6 bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700"></a>
+      </div>
+
+    </section>
+  </main>
+
+  <footer id="site-footer" class="bg-slate-900 text-slate-300"></footer>
+
+  <!-- الترتيب مهم -->
+  <script src="js/layout.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/form.js"></script>
+  <script

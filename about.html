@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="title.about">من نحن | نخبة التقنية</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+  <header id="site-header" class="bg-white shadow sticky top-0 z-50"></header>
+
+  <main>
+    <!-- عنوان الصفحة -->
+    <section class="bg-gradient-to-br from-blue-600 to-blue-900 text-white">
+      <div class="max-w-6xl mx-auto px-4 py-16 text-center">
+        <h1 class="text-3xl md:text-5xl font-bold" data-i18n="about.title"></h1>
+        <p class="mt-4 text-blue-100 max-w-2xl mx-auto" data-i18n="about.sub"></p>
+      </div>
+    </section>
+
+    <!-- قصتنا -->
+    <section class="max-w-6xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-bold" data-i18n="about.story.title"></h2>
+        <p class="mt-4 text-slate-600 leading-8" data-i18n="about.story.text"></p>
+      </div>
+      <div class="bg-blue-100 rounded-2xl h-64 flex items-center justify-center text-7xl">🚀</div>
+    </section>
+
+    <!-- القيم -->
+    <section class="bg-white">
+      <div class="max-w-6xl mx-auto px-4 py-16">
+        <h2 class="text-2xl md:text-3xl font-bold text-center" data-i18n="about.values.title"></h2>
+        <div class="mt-10 grid md:grid-cols-3 gap-6">
+          <div class="bg-slate-50 rounded-xl p-6 text-center">
+            <div class="text-4xl">🎯</div>
+            <h3 class="mt-3 font-bold text-lg" data-i18n="val.quality"></h3>
+            <p class="mt-2 text-sm text-slate-500" data-i18n="val.quality.d"></p>
+          </div>
+          <div class="bg-slate-50 rounded-xl p-6 text-center">
+            <div class="text-4xl">🤝</div>
+            <h3 class="mt-3 font-bold text-lg" data-i18n="val.trust"></h3>
+            <p class="mt-2 text-sm text-slate-500" data-i18n="val.trust.d"></p>
+          </div>
+          <div class="bg-slate-50 rounded-xl p-6 text-center">
+            <div class="text-4xl">💡</div>
+            <h3 class="mt-3 font-bold text-lg" data-i18n="val.innovation"></h3>
+            <p class="mt-2 text-sm text-slate-500" data-i18n="val.innovation.d"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- أرقام -->
+    <section class="max-w-6xl mx-auto px-4 py-16">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <p class="text-4xl font-bold text-blue-600">+120</p>
+          <p class="mt-1 text-slate-500" data-i18n="stat.projects"></p>
+        </div>
+        <div>
+          <p class="text-4xl font-bold text-blue-600">+60</p>
+          <p class="mt-1 text-slate-500" data-i18n="stat.clients"></p>
+        </div>
+        <div>
+          <p class="text-4xl font-bold text-blue-600">+8</p>
+          <p class="mt-1 text-slate-500" data-i18n="stat.years"></p>
+        </div>
+        <div>
+          <p class="text-4xl font-bold text-blue-600">24/7</p>
+          <p class="mt-1 text-slate-500" data-i18n="stat.support"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="bg-slate-900 text-slate-300"></footer>
+
+  <script src="js/layout.js"></script>
+  <script src="js/i18n.js"></script>
+  
+</body>
+</html>
